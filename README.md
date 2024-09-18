@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# User Dashboard with Redux Toolkit, RTK Query, and Tailwind CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple User Dashboard built with **React**, **Redux Toolkit**, **RTK Query**, and **Tailwind CSS**. It allows users to view a list of users, add new users, and update existing users. The dummy data is fetched from [reqres.in](https://reqres.in) and managed using RTK Query for API calls. The project also includes modals for adding and updating user information.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **View Users**: Displays users in a card view fetched from the API.
+- **Add User**: Opens a modal to add a new user to the list.
+- **Update User**: Allows updating user information through a modal.
+- **State Management**: Managed with **Redux Toolkit** and **RTK Query**.
+- **UI**: Styled with **Tailwind CSS** for a clean and responsive design.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
+- **Viewing Users:** Upon loading, the app fetches and displays a list of users from the API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Adding a User:** Click the "Add User" button to open the modal, fill out the form, and submit. The user will be added to the list (note: reqres.in does not persist added data, so the new user will disappear on refresh).
 
-### `npm test`
+- **Updating a User:** Click on any user card to select and update the user details. The update modal will appear allowing you to modify the user's information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Key Files
 
-### `npm run build`
+- **apiSlice.js:** Defines the RTK Query API calls for fetching and adding users.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **userSlice.js:** Redux slice for managing user state such as storing users and updating them.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **AddUserModal.jsx:** Component with the form and functionality for adding a new user.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **UpdateUserModal.jsx:** Component for updating an existing user's details.
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React:** Frontend framework.
+- **Redux Toolkit:** For managing global state.
+- **RTK Query:** For handling API calls.
+- **Tailwind CSS:** For styling the user interface.
+- **reqres.in:** Dummy API for testing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/VedantMate/reactfrontend.git
+   cd user-dashboard
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   npm install
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   npm start
+``` 
